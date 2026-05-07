@@ -63,10 +63,14 @@ function verifica(obj) {
     if (obj.id == sorteado) {
       acertou(obj);
       acertos++;
-    } else {
-      obj.className = "errou";
-      const objSorteado = document.getElementById(sorteado);
-      acertou(objSorteado);
+    }
+     else {
+  obj.className = "errou";
+
+  obj.innerHTML = '<span style="font-size:70px;">🤡</span>';
+
+  const objSorteado = document.getElementById(sorteado);
+  acertou(objSorteado);
     }
 
     if (tentativas == 3) {
